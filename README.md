@@ -30,4 +30,4 @@ Puedes modificar los nombres de los padres e hijos en el archivo `FamiliaControl
 
 ---
 
-**Autor:** Alexander
+**Autor:** YeraldoCode
