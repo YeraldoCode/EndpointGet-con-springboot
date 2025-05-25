@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>familia del yera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f7f7fa;
+            padding: 40px 0;
+        }
+        .family-list {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .list-group-item {
+            border-radius: 8px !important;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .padre {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        .madre {
+            font-weight: bold;
+            color: #6610f2;
+        }
+        .hijo {
+            color: #198754;
+        }
+    </style>
+</head>
+<body>
+    <div class="container family-list">
+        <ul class="list-group">
+            <li class="list-group-item padre" th:text="${padre}">PADRE</li>
+            <li class="list-group-item madre">
+                <span th:text="${madre}">MADRE</span>
+                <ul class="list-group mt-2 ms-4">
+                    <li class="list-group-item hijo" th:each="hijo : ${hijos}" th:text="${hijo}">HIJO</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
